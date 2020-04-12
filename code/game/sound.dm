@@ -209,6 +209,11 @@ var/list/glasscrack_sound = list(
 	'sound/effects/glass_crack3.ogg',
 	'sound/effects/glass_crack4.ogg'
 	)
+var/list/canopen_sound = list(
+    'sound/effects/can_open1.ogg',
+    'sound/effects/can_open2.ogg',
+    'sound/effects/can_open3.ogg'
+    )
 //var/list/gun_sound = list('sound/weapons/gunshot/gunshot1.ogg', 'sound/weapons/gunshot/gunshot2.ogg','sound/weapons/gunshot/gunshot3.ogg','sound/weapons/gunshot/gunshot4.ogg')
 
 /proc/playsound(atom/source, soundin, vol, vary, extrarange, falloff, is_global, usepressure = 1, environment = -1, required_preferences = 0, required_asfx_toggles = 0)
@@ -425,4 +430,5 @@ var/list/glasscrack_sound = list(
 			if ("switch") soundin = pick(switch_sound)
 			if ("keyboard") soundin = pick(keyboard_sound)
 			if ("pickaxe") soundin = pick(pickaxe_sound)
+			if ("canopen") soundin = pick(canopen_sound)
 	return soundin
